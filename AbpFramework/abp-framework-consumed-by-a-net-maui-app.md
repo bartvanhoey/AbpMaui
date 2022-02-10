@@ -98,7 +98,7 @@ ngrok.exe http -region eu https://localhost:<replace-with-the-abp-api-port-numbe
 After running this command, you will receive the following output:
 The API is now publicly available on [https://f7db-2a02-810d-98c0-576c-647e-cd22-5b-e9a3.eu.ngrok.io](https://f7db-2a02-810d-98c0-576c-647e-cd22-5b-e9a3.eu.ngrok.io)
 
-![ngrok in action](Images/ngrok.jpg)
+![ngrok in action](../Images/ngrok.jpgImages)
 
 ### Copy the ngrok url
 

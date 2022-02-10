@@ -1,0 +1,54 @@
+{
+   "version": "2.0.0",
+   "tasks": [
+       {
+           "label": "buildApi",
+           "command": "dotnet",
+           "type": "process",
+           "args": [
+               "build",
+               "${workspaceFolder}/src/AbpMauiApi.HttpApi.Host/AbpMauiApi.HttpApi.Host.csproj",
+               "/property:GenerateFullPaths=true",
+               "/consoleloggerparameters:NoSummary"
+           ],
+           "problemMatcher": "$msCompile"
+       },
+       {
+           "label": "buildDbMigrator",
+           "command": "dotnet",
+           "type": "process",
+           "args": [
+               "build",
+               "${workspaceFolder}/src/AbpMauiApi.DbMigrator/AbpMauiApi.DbMigrator.csproj",
+               "/property:GenerateFullPaths=true",
+               "/consoleloggerparameters:NoSummary"
+           ],
+           "problemMatcher": "$msCompile"
+       },
+       {
+           "label": "publish",
+           "command": "dotnet",
+           "type": "process",
+           "args": [
+               "publish",
+               "${workspaceFolder}/src/AbpMauiApi.HttpApi.Host/AbpMauiApi.HttpApi.Host.csproj",
+               "/property:GenerateFullPaths=true",
+               "/consoleloggerparameters:NoSummary"
+           ],
+           "problemMatcher": "$msCompile"
+       },
+       {
+           "label": "watch",
+           "command": "dotnet",
+           "type": "process",
+           "args": [
+               "watch",
+               "run",
+               "${workspaceFolder}/src/AbpMauiApi.HttpApi.Host/AbpMauiApi.HttpApi.Host.csproj",
+               "/property:GenerateFullPaths=true",
+               "/consoleloggerparameters:NoSummary"
+           ],
+           "problemMatcher": "$msCompile"
+       }
+   ]
+}   
