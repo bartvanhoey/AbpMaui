@@ -263,7 +263,7 @@ namespace AbpMauiApp.Services
 Run the **HttpApi.Host** project and make sure **Ngrok** is running too. 
 Start the **.NET Maui app**, enter the credentials (user name: **admin** - password: **1q2w3E***) and click the **Login** button.
 
-![Access token received](Images/accesstoken_received.jpg)
+![Access token received](https://github.com/bartvanhoey/AbpMaui/blob/main/Images/accesstoken_received.jpg)
 
 Et voilà! As you can see, you received an access token from the **ABP Framework API**. Now you can start consuming the API!
 
