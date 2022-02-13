@@ -10,7 +10,7 @@ namespace AbpMauiApp.Services
             string clientId = "AbpMauiApi_Maui";
             string clientSecret = "1q2w3e*";
             string scope = "email openid profile role phone address AbpMauiApi"; ;
-            string ngrokUrl = "https://768f-2a02-810d-98c0-576c-e4f8-6c-6e9e-9264.eu.ngrok.io";
+            string ngrokUrl = "https://04bb-2a02-810d-98c0-576c-d142-c4ea-41-daad.eu.ngrok.io";
 
             var data = $"grant_type=password&username={userName}&password={password}&client_id={clientId}&client_secret={clientSecret}&scope={scope}";
 

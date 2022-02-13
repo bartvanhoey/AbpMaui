@@ -127,17 +127,26 @@ Replace the content of the MainPage.xaml with the content below:
   x:Class="AbpMauiApp.MainPage"
   BackgroundColor="{DynamicResource SecondaryColor}">
 
-  <ContentPage.BindingContext>
-    <local:MainViewModel />
-  </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:MainViewModel />
+    </ContentPage.BindingContext>
 
-  <StackLayout Padding="20" VerticalOptions="Center">
-    <Entry Text="{Binding LoginUserName}" Placeholder="Enter user name..." />
-    <Entry Text="{Binding LoginPassword}" Placeholder="Enter password..." />
-    <label Text="{Binding LoginUserMessage}" />
-    <button Text="Login" FontAttributes="Bold" Command="{Binding LoginUserCommand}" HorizontalOptions="FillAndExpand"  />
-  </StackLayout>
+    <StackLayout Padding="10">
+        <Label HorizontalOptions="Center"  Margin="5,15,5,15" Text="Hi, ABP Framework! Nice to meet you!" TextColor="#7b5fdf"  FontSize="18"
+            FontAttributes="Bold"/>
+        <Image Grid.Row="4"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                WidthRequest="250"
+                HeightRequest="310"
+                HorizontalOptions="Center" />
 
+        <Entry Text="{Binding LoginUserName}" Placeholder="Enter user name..." />
+        <Entry Text="{Binding LoginPassword}"  IsPassword="true" Placeholder="Enter password..." />
+        <Button Text="Login"  FontAttributes="Bold" Command="{Binding LoginUserCommand}" HorizontalOptions="FillAndExpand" />
+        <Label Margin="20" HorizontalOptions="Center"  Text="{Binding LoginUserMessage}" TextColor="Green"  FontSize="18"
+            FontAttributes="Bold"/>
+        </StackLayout>
 </ContentPage>
 ```
 

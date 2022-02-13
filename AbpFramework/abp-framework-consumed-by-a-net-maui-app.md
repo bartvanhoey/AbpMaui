@@ -98,7 +98,7 @@ ngrok.exe http -region eu https://localhost:<replace-with-the-abp-api-port-numbe
 After running this command, you will receive the following output:
 The API is now publicly available on [https://f7db-2a02-810d-98c0-576c-647e-cd22-5b-e9a3.eu.ngrok.io](https://f7db-2a02-810d-98c0-576c-647e-cd22-5b-e9a3.eu.ngrok.io)
 
-![ngrok in action](https://github.com/bartvanhoey/AbpMaui/blob/main/Images/ngrok.jpg)
+![ngrok in action](../Images/ngrok.jpg)
 
 ### Copy the ngrok url
 
@@ -127,16 +127,26 @@ Replace the content of the MainPage.xaml with the content below:
   x:Class="AbpMauiApp.MainPage"
   BackgroundColor="{DynamicResource SecondaryColor}">
 
-  <ContentPage.BindingContext>
-    <local:MainViewModel />
-  </ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:MainViewModel />
+    </ContentPage.BindingContext>
 
-  <StackLayout Padding="20" VerticalOptions="Center">
-    <Entry Text="{Binding LoginUserName}" Placeholder="Enter user name..." />
-    <Entry Text="{Binding LoginPassword}" Placeholder="Enter password..." />
-    <label Text="{Binding LoginUserMessage}" />
-    <button Text="Login" FontAttributes="Bold" Command="{Binding LoginUserCommand}" HorizontalOptions="FillAndExpand"  />
-  </StackLayout>
+    <StackLayout Padding="10">
+        <Label HorizontalOptions="Center"  Margin="5,15,5,15" Text="Hi, ABP Framework! Nice to meet you!" TextColor="#7b5fdf"  FontSize="18"
+            FontAttributes="Bold"/>
+        <Image Grid.Row="4"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                WidthRequest="250"
+                HeightRequest="310"
+                HorizontalOptions="Center" />
+
+        <Entry Text="{Binding LoginUserName}" Placeholder="Enter user name..." />
+        <Entry Text="{Binding LoginPassword}"  IsPassword="true" Placeholder="Enter password..." />
+        <Button Text="Login"  FontAttributes="Bold" Command="{Binding LoginUserCommand}" HorizontalOptions="FillAndExpand" />
+        <Label Margin="20" HorizontalOptions="Center"  Text="{Binding LoginUserMessage}" TextColor="Green"  FontSize="18"
+            FontAttributes="Bold"/>
+    </StackLayout>
 
 </ContentPage>
 ```
@@ -263,7 +273,7 @@ namespace AbpMauiApp.Services
 Run the **HttpApi.Host** project and make sure **Ngrok** is running too. 
 Start the **.NET Maui app**, enter the credentials (user name: **admin** - password: **1q2w3E***) and click the **Login** button.
 
-![Access token received](https://github.com/bartvanhoey/AbpMaui/blob/main/Images/accesstoken_received.jpg)
+![Access token received](../Images/accesstoken_received.jpg)
 
 Et voilà! As you can see, you received an access token from the **ABP Framework API**. Now you can start consuming the API!
 
