@@ -1,7 +1,5 @@
 ## ABP Framework consumed by .NET MAUI
 
-## Introduction
-
 In this article, I will show you how you can consume an **ABP Framework** application with a **.NET Maui** app.
 
 The ABP Framework application has been developed with **Blazor** as UI framework and **SQL Server** as database provider.
