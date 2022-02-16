@@ -1,4 +1,4 @@
-## ABP Framework consumed by a .NET MAUI app
+## ABP Framework consumed by .NET MAUI
 
 ## Introduction
 
