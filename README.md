@@ -18,7 +18,7 @@ The following tools are needed to run the solution and follow along. You will al
 - Visual Studio 2022 Preview
 - Ngrok
 
-## Create a new ABP Framework Application
+## Create ABP Framework application
 
 - Install or update the ABP CLI:
 
@@ -45,7 +45,7 @@ abp new AbpMauiApi -u blazor -o AbpMauiApi
     }
 ```
 
-### Add Maui client IdentityServer configuration
+#### Add Maui client IdentityServer configuration
 
 In the **CreateClientAsync** method in class **IdentityServerDataSeedContributor** of the **AbpMauiApi.Domain** project.
 
@@ -269,7 +269,7 @@ namespace AbpMauiApp.Services
 
 ## Test the result
 
-Run the **HttpApi.Host** project and make sure **Ngrok** is running too. 
+Run the **HttpApi.Host** project and make sure **Ngrok** is running too.
 Start the **.NET Maui app**, enter the credentials (user name: **admin** - password: **1q2w3E***) and click the **Login** button.
 
 ![Access token received](Images/accesstoken_received.jpg)
